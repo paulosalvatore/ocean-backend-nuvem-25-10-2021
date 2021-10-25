@@ -7,6 +7,7 @@ const app = express();
     // Conectar com o banco de dados
     // Pegar a minha collection
 
+    /*
     const url = "mongodb://localhost:27017";
     const dbName = "ocean_bancodados_20_10_2021";
 
@@ -19,6 +20,9 @@ const app = express();
     const db = client.db(dbName);
 
     const collection = db.collection("herois");
+    */
+
+    const collection = undefined;
 
     app.use(express.json());
 
@@ -148,5 +152,5 @@ const app = express();
         res.send("Item removido com sucesso.");
     });
 
-    app.listen(3000);
+    app.listen(process.env.PORT || 3000);
 })();
